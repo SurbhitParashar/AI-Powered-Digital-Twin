@@ -1,0 +1,213 @@
+*{
+    margin:0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    width:100%;
+    background: linear-gradient(135deg, #896734, #25253d, #3c4b75, #488b6e);
+}
+#container{
+    display: flex;                  
+    height: 100%;
+    width:100%;
+    box-sizing: border-box;
+    gap:10px;
+    padding: 5%;
+}
+#left{
+    display: flex;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+    background-color: rgb(51, 64, 67);
+   flex-direction: column;
+    background: linear-gradient(135deg, #9c8563, #25253d, #16213e, #aaacae);
+    color: aliceblue;
+    border-radius: 20px;
+    justify-content: space-evenly;
+    box-shadow:1px 2px 20px yellowgreen;
+}
+#profilepic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    gap: 10px;
+    padding: 5%;
+}
+#profilepic button{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(89, 152, 247);
+    border: none;
+    border-radius:20px;
+    color: aliceblue;
+    cursor: pointer;
+}
+#profilepic button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(89, 152, 247);
+}
+#profilepic img{
+    height:100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid rgb(255, 255, 255);
+    image-rendering: auto;
+    image-resolution: auto;
+    background-size: contain;
+    background-position: center;
+}
+ #midl{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: aliceblue;
+}
+#navs #midl a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: large;
+}
+#navs{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+#logout{
+        width: 94%;
+        padding: 10px;
+        background-color: rgb(248, 2, 2);
+        border: none;
+        border-radius:20px;
+        color: aliceblue;
+        cursor: pointer;
+}
+#logout:hover{
+    background-color: rgb(175, 14, 14);
+}
+    
+#mid{
+    display: flex;
+    width: 45%;
+    height: 100%;
+    flex-direction: column;
+    row-gap: 10px;
+    
+    justify-content: space-between;
+}
+#right{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+   background-color: #17191d5c;
+   border-radius: 20px;
+   box-shadow:1px 2px 20px rebeccapurple;
+}
+#midt{
+    display: flex;
+    width:100%;
+    height: 40%;
+    gap:3%;
+}
+#midtl{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width:50%;
+    height: 245%;
+    background-color: #323e6188;
+    border-radius: 20px;
+    flex-direction: column;
+    color: aliceblue;
+    box-shadow:1px 2px 20px brown;
+}
+.chart-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+}
+#mid svg {
+    transform: rotate(-90deg); /* Rotates start to top */
+}
+.center-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f7f1f1;
+}
+#midtr{
+    padding: 10px;
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    width:50%;
+    height: 100%;
+    background-color: #323e6188;
+    border-radius: 20px;
+    flex-direction: column;
+    color: aliceblue;
+    box-shadow:1px 2px 20px aquamarine;
+}
+#midb{
+    position: relative;
+    left:50%;
+    display: flex;
+   align-items: center;
+    height: 55%;
+    width: 50%;
+    background-color: #323e6188;
+    border-radius: 20px;
+    margin-top: 10px;
+    color: aliceblue;
+    flex-direction: column;
+    box-shadow:1px 2px 20px ;
+}
+#chatbox{
+    height: 90%;
+    width:100%;
+}
+#chatS{
+    display: flex;
+    width: 100%;
+    height:5%;
+    align-items: center;
+    justify-content: center ;
+    gap: 20px;
+}
+#chatS input,button{
+    padding: 10px;
+    font-size: medium;
+    border-radius: 30px;
+    border:none;
+}
+#taskslist{
+    display: flex;
+  width: 100%;
+  height: 80%;
+  gap: 10px;
+  overflow: auto;
+  scrollbar-width: none;
+  flex-direction: column;
+}
+#tasks{
+   display: flex;
+   justify-content: space-between;
+   padding: 10px;
+}
+#emails{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+

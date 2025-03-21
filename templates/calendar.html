@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Calendar Replica</title>
+    <link rel="stylesheet" href="../static/css/style1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <i class="material-icons menu-icon">menu</i>
+                <img src="../static/download.jpeg" alt="Calendar Logo" class="logo">
+                <span class="calendar-text">Calendar</span>
+            </div>
+            <div class="header-center">
+                <button class="today-btn">Today</button>
+                <i class="material-icons nav-icon">chevron_left</i>
+                <i class="material-icons nav-icon">chevron_right</i>
+                <span class="date-text">December 2024</span>
+            </div>
+            <div class="header-right">
+                <i class="material-icons view-icon">view_week</i>
+                <i class="material-icons view-icon">settings</i>
+                <i class="material-icons help-icon">help_outline</i>
+                <i class="material-icons apps-icon">apps</i>
+                <img src="../static/images.jpeg" alt="Profile" class="profile-pic">
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="sidebar">
+                <button class="create-btn">
+                    <i class="material-icons create-icon">add</i> Create
+                </button>
+                <div class="sidebar-section">
+                    <i class="material-icons home-icon">home</i> Home
+                </div>
+                <div class="sidebar-section">
+                    <div class="date-range">
+                        <span class="date-num">22</span>
+                        <span class="date-num">23</span>
+                        <span class="date-num">24</span>
+                        <span class="date-num">25</span>
+                        <span class="date-num">26</span>
+                        <span class="date-num">27</span>
+                        <span class="date-num">28</span>
+                    </div>
+                    <div class="date-range">
+                        <span class="date-num">29</span>
+                        <span class="date-num">30</span>
+                        <span class="date-num">31</span>
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <i class="material-icons search-icon">search</i> Search for people
+                </div>
+                <div class="sidebar-section">
+                    <span class="section-title">My calendars</span>
+                    <div class="calendar-list">
+                        <div class="calendar-item">
+                            <i class="material-icons calendar-icon">check_box</i> Scott's Calendar
+                        </div>
+                        <div class="calendar-item">
+                            <i class="material-icons calendar-icon">check_box</i> Big Spring Project
+                        </div>
+                        <div class="calendar-item">
+                            <i class="material-icons calendar-icon">check_box</i> Birthdays
+                        </div>
+                        <div class="calendar-item">
+                            <i class="material-icons calendar-icon">check_box</i> Booking Calendar
+                        </div>
+                        <div class="calendar-item">
+                            <i class="material-icons calendar-icon">check_box</i> Family
+                        </div>
+                        <div class="calendar-item">
+                            <i class="material-icons calendar-icon">check_box</i> Pickleball
+                        </div>
+                        <div class="calendar-item">
+                            <i class="material-icons calendar-icon">check_box</i> Softball League
+                        </div>
+                        <div class="calendar-item">
+                            <i class="material-icons calendar-icon">check_box</i> Tasks
+                        </div>
+                        <div class="calendar-item">
+                            <i class="material-icons calendar-icon">check_box</i> Work
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <span class="section-title">Other calendars</span>
+                    <i class="material-icons add-icon">add</i>
+                    <i class="material-icons expand-icon">expand_less</i>
+                    <div class="calendar-list">
+                        <div class="calendar-item">
+                            <i class="material-icons calendar-icon">check_box</i> Holidays in United States
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calendar-view">
+                <div class="time-column">
+                    <div class="time-slot">8 AM</div>
+                    <div class="time-slot">9 AM</div>
+                    <div class="time-slot">10 AM</div>
+                    <div class="time-slot">11 AM</div>
+                    <div class="time-slot">12 PM</div>
+                    <div class="time-slot">1 PM</div>
+                    <div class="time-slot">2 PM</div>
+                    <div class="time-slot">3 PM</div>
+                    <div class="time-slot">4 PM</div>
+                    <div class="time-slot">5 PM</div>
+                    <div class="time-slot">6 PM</div>
+                    <div class="time-slot">7 PM</div>
+                </div>
+                <div class="day-columns">
+                    <div class="day-column">
+                        <div class="day-num">2</div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-num">3</div>
+                        <div class="event" style="top: 0; height: 50px;">Breakfast w/ Kelly<br>8-9am</div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-num">4</div>
+                        <div class="event" style="top: 50px; height: 50px;">Client Consultation<br>9-10am</div>
+                        <div class="event" style="top: 100px; height: 80px;">New Software Webinar<br>10-11:30am</div>
+                        <div class="event" style="top: 180px; height: 50px;">Quarterly Budget Review<br>11am-12pm</div>
+                        <div class="event" style="top: 280px; height: 50px;">Interview New Virtual Assistant<br>1-2pm</div>
+                        <div class="event" style="top: 330px; height: 50px;">Weekly Content Planning<br>2-3pm</div>
+                        <div class="event" style="top: 380px; height: 80px;">Content Creation Block<br>3-4:30pm</div>
+                        <div class="event" style="top: 530px; height: 80px;">Team Practice<br>6-7:30pm</div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-num">5</div>
+                        <div class="event" style="top: 330px; height: 50px;">Weekly Review Meeting<br>2-3pm</div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-num">6</div>
+                        <div class="event" style="top: 530px; height: 80px;">Team Practice<br>6-7:30pm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        </div>
+    </div>
+</body>
+</html>

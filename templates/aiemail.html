@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Email Inbox</title>
+    <link rel="stylesheet" href="../static/css/ai2.css">
+    <script defer src="../static/js/ai2.js"></script>
+</head>
+<body>
+    <div class="body">
+    <div class="container">
+        <header>
+            <h1>AI Email Inbox</h1>
+            <button id="darkModeToggle">🌙</button>
+        </header>
+        <main>
+            <aside class="sidebar">
+                <input type="text" id="search" placeholder="🔎 Search messages...">
+                <button id="newMessage">+ New Message</button>
+                <ul class="categories">
+                    <li class="category active" data-category="primary">📥 Primary</li>
+                    <li class="category" data-category="social">📢 Social</li>
+                    <li class="category" data-category="promotions">🎁 Promotions</li>
+                    <li class="category" data-category="spam">🚫 Spam</li>
+                    <li class="category" data-category="sent">📤 Sent</li>
+                    <li class="category" data-category="starred">⭐ Starred</li>
+                </ul>
+                <ul class="message-list">
+                    <li class="message primary unread" data-message="Meeting at 10 AM..." data-id="1">
+                        <input type="checkbox" class="select-message">
+                        <span>Alice</span>
+                        <p>Meeting at 10 AM...</p>
+                        <span class="sentiment">😊</span>
+                        <button class="delete">🗑</button>
+                    </li>
+                    <li class="message primary unread" data-message="Meeting at 10 AM..." data-id="1">
+                        <input type="checkbox" class="select-message">
+                        <span>Monika</span>
+                        <p>Meeting at 12 AM...</p>
+                        <span class="sentiment">😊</span>
+                        <button class="delete">🗑</button>
+                    </li>
+                    <li class="message social" data-message="Join our new tech group..." data-id="2">
+                        <input type="checkbox" class="select-message">
+                        <span>Vic Steward</span>
+                        <p>Join our new tech group...</p>
+                        <span class="sentiment">🙂</span>
+                        <button class="delete">🗑</button>
+                    </li>
+                    <li class="message social" data-message="Join our new data analyst group..." data-id="2">
+                        <input type="checkbox" class="select-message">
+                        <span>Shalu Jangid</span>
+                        <p>Join our new tech group...</p>
+                        <span class="sentiment">🙂</span>
+                        <button class="delete">🗑</button>
+                    </li>
+                    <li class="message primary unread" data-message="Meeting at 10 AM..." data-id="1">
+                        <input type="checkbox" class="select-message">
+                        <span>Shehnaz khan</span>
+                        <p>Meeting at 9 AM...</p>
+                        <span class="sentiment">😊</span>
+                        <button class="delete">🗑</button>
+                    </li>
+                    <li class="message social" data-message="Join our new  data scientist group..." data-id="2">
+                        <input type="checkbox" class="select-message">
+                        <span>Shalu Jangid</span>
+                        <p>Join our new tech group...</p>
+                        <span class="sentiment">🙂</span>
+                        <button class="delete">🗑</button>
+                    </li>
+                </ul>
+                <button id="bulkDelete">🗑 Bulk Delete</button>
+            </aside>
+            <section class="email-view">
+                <h2>New Message</h2>
+                <input type="email" id="recipient" placeholder="📧 Send to">
+                <input type="text" id="subject" placeholder="📝 Subject">
+                <textarea id="emailBody" placeholder="✍ Write your message..."></textarea>
+                <input type="file" id="attachment">
+                <div id="attachmentPreview"></div>
+                <button id="startVoice">🎤 Dictate</button>
+                <button id="smartReply">🤖 AI Smart Reply</button>
+                <button id="summarizeEmail">📄 Summarize Email</button>
+                <button id="analyzeSentiment">😊 Sentiment Analysis</button>
+                <button id="setAutoReply">⚙ Set Auto-Reply</button>
+                <button id="sendMessage">🚀 Send Now</button>
+            </section>
+        </main>
+        <button class="floating-btn" id="composeBtn">✉</button>
+
+        <section id="emailStats">
+            <h2>Email Statistics</h2>
+            <p>📩 Total Emails: <span id="totalEmails">0</span></p>
+            <p>📬 Unread Emails: <span id="unreadEmails">0</span></p>
+            <p>📤 Sent Emails: <span id="sentEmails">0</span></p>
+            <p>🚀 AI Responses Sent: <span id="aiReplies">0</span></p>
+        </section>
+
+        
+    </div>
+    </div>
+</body>
+</html>

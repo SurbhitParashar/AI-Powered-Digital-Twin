@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    width:100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(https://media.istockphoto.com/id/1432955867/vector/technology-abstract-lines-and-dots-connect-background-with-hexagons-hexagon-grid-hexagons.jpg?s=612x612&w=0&k=20&c=gSMTHNjpqgpDU06e3G8GhQTUcqEcWfvafMFjzT3qzzQ=);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+#Header{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#righth{
+      display: flex;
+      gap:30px;
+      padding: 10px;
+}
+#righth a{
+    font-weight: 200;
+    text-decoration: none;
+    color:white;
+    cursor: pointer;
+    font-size: large;
+}
+
+#lefth svg{
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#root{
+    height: 100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main{
+    height: 50%;
+    width: 50%;
+    background-color: rgba(68, 128, 160, 0.481);
+    display: flex;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 5px 2px 15px 1px rgba(200, 189, 188, 0.793);
+}
+#Left{
+    width:50%;
+    height: 100%;
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../—Pngtree—artificial\ intelligence\ robot\ illustration_9047239.png');
+    animation: rotateZ 2s linear infinite;
+}
+#right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width:90%;
+    padding: 10px;
+    border-radius: 50px;
+    border: rgb(64, 136, 131) 2px seagreen;
+    background-color: transparent;
+    font-size: medium;
+    color: rgb(238, 238, 235);
+}
+h2{
+    margin: 10px;
+    font-size: xx-large;
+    color: aliceblue;
+}
+#button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+#button button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: rgb(55, 155, 199);
+    font-size: medium;
+    color: whitesmoke;
+    cursor: pointer;
+    align-items: center;
+    border:none
+}
+
+
+
+@keyframes rotateZ {
+    from {
+      transform: translatey(0px);
+    }
+    to {
+      transform: translateY(10px);
+    }
+  }
+  #button :hover{
+    background-color: rgb(182, 168, 195);
+  }
+@media (Max-width: 700px) {
+    #main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}

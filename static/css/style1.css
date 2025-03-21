@@ -1,0 +1,237 @@
+/* style.css */
+/* style.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    background: linear-gradient(135deg, #9c8563, #25253d, #16213e, #aaacae);
+    background-position: center;
+    background-size: cover;
+    color: #d9eaf7;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #3b74be59;
+    border-radius: 10px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon, .logo {
+    margin-right: 10px;
+}
+
+.logo {
+    height: 30px;
+    border-radius: 50px;
+    border: 1px solid saddlebrown;
+}
+
+.calendar-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+}
+
+.today-btn, .nav-icon, .date-text {
+    margin: 0 10px;
+}
+
+.today-btn {
+    padding: 8px 12px;
+    background-color: #e8f0fe;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.nav-icon {
+    cursor: pointer;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.view-icon, .settings, .help-icon, .apps-icon, .profile-pic {
+    margin-left: 10px;
+}
+
+.profile-pic {
+    height: 30px;
+    border-radius: 50%;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    border-right: 1px solid #e0e0e0;
+    background-color: #3b74be59;
+    border-radius: 10px;
+}
+
+.create-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.create-icon {
+    margin-right: 10px;
+}
+
+.sidebar-section {
+    margin-bottom: 15px;
+}
+
+.date-range {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.date-num {
+    padding: 5px;
+    margin: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.date-num:hover {
+    background-color: #f1f3f4;
+    color: #16213e;
+    font-weight: 700;
+}
+
+.section-title {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.calendar-list {
+    margin-top: 5px;
+}
+
+.calendar-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.calendar-item:hover {
+    background:  linear-gradient(135deg, #896734, #25253d, #3c4b75, #488b6e);
+    color:white;
+    font-size: 19px;
+    border-radius: 20px;
+}
+
+.calendar-icon {
+    margin-right: 10px;
+}
+
+.calendar-view {
+    display: flex;
+    flex: 1;
+    overflow-x: auto;
+}
+
+.time-column {
+    width: 80px;
+    border-right: 1px solid #e0e0e0;
+    padding-top: 50px;
+}
+
+.time-slot {
+    height: 50px;
+    text-align: right;
+    padding: 10px;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.day-columns {
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+.day-column {
+    flex: 1;
+    border-right: 1px solid #e0e0e0;
+    padding-top: 20px;
+    position: relative;
+}
+
+.day-num {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-weight: 500;
+}
+
+.event {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #587bb86e;
+    border: 1px solid #d9eaf7;
+    padding: 5px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.play-icon, .time-text, .step-text {
+    margin-right: 10px;
+}
+
+.youtube-logo {
+    height: 20px;
+    margin-left: 10px;
+}
