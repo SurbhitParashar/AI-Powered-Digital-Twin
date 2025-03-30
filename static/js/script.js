@@ -1,8 +1,4 @@
-const users = {
-    "admin@example.com": "admin123",
-    "user@example.com": "password123",
-    "guest@example.com": "guestpass"
-};
+
 
 // Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", function () {
@@ -18,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = passwordInput.value.trim();
 
         // Within the submit event listener
-if (users[email] && users[email] === password) {
-    alert("Login successful! Welcome, " + email);
+if (email && password ) {
+
     window.location.href = '/admin'; // Correct redirect URL
 } else {
     alert("Invalid email or password. Please try again.");

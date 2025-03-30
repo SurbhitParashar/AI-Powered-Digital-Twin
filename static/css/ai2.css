@@ -156,7 +156,7 @@ header {
 .email-view h2 {
     margin-bottom: 15px;
     font-size: 24px;
-    color: #333;
+    color: #000000;
 }
 
 .email-view input, .email-view textarea {

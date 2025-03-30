@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Research Assistant</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+    /* Query Input Area */
+    .query-input {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .query-input input[type="text"] {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      outline: none;
+      transition: box-shadow 0.3s ease;
+    }
+    .query-input input[type="text"]:focus {
+      box-shadow: 0 0 10px 2px #00bcd4;
+    }
+    .query-input button {
+      margin-left: 10px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: #00bcd4;
+      color: #121212;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .query-input button:hover {
+      background-color: #0097a7;
+      transform: scale(1.05);
+    }
+    /* Notifications */
+    .notifications {
+      background-color: #1e1e1e;
+      padding: 10px 15px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      animation: fadeIn 1s ease;
+    }
+    .notifications .icon {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+    .notifications p {
+      margin: 0;
+      font-size: 14px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    /* Results Panel */
+    .results-panel {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 4px;
+      padding: 20px;
+      flex: 1 1 calc(33.333% - 20px);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #00bcd4;
+    }
+    .card p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .card {
+        flex: 1 1 calc(50% - 20px);
+      }
+    }
+    @media (max-width: 600px) {
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+    /* AI-inspired animation: subtle glowing effect */
+    @keyframes aiGlow {
+      0% { box-shadow: 0 0 10px 0 rgba(0, 188, 212, 0.5); }
+      50% { box-shadow: 0 0 20px 5px rgba(0, 188, 212, 1); }
+      100% { box-shadow: 0 0 10px 0 rgba(0, 188, 212, 0.5); }
+    }
+    .ai-animation {
+      animation: aiGlow 2s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Query Input Area -->
+    <div class="query-input">
+      <input type="text" id="query-input" placeholder="Enter your research query..." />
+      <button class="ai-animation" id="search-btn">Search</button>
+    </div>
+    <!-- Notifications -->
+    <div class="notifications">
+      <span class="icon">🔔</span>
+      <p id="notification-text">New actionable insights available: "AI in Healthcare" report published.</p>
+    </div>
+    <!-- Results Panel (Static content remains until a new search) -->
+    <div class="results-panel" id="results-panel">
+      <div class="card ai-animation">
+        <h3>The Impact of AI in Healthcare</h3>
+        <p>AI is revolutionizing diagnostics, drug discovery, and personalized medicine. Key innovations include AI-assisted radiology and predictive analytics.</p>
+      </div>
+      <div class="card">
+        <h3>Quantum Computing: The Next Big Leap?</h3>
+        <p>Quantum computers have the potential to break traditional encryption and accelerate problem-solving in chemistry and materials science.</p>
+      </div>
+      <div class="card">
+        <h3>How AI is Automating Software Development</h3>
+        <p>AI-powered tools like GitHub Copilot and OpenAI Codex are transforming the way developers write and optimize code.</p>
+      </div>
+      <div class="card">
+        <h3>Future of Renewable Energy with AI</h3>
+        <p>AI enhances energy forecasting, grid optimization, and smart energy management for a sustainable future.</p>
+      </div>
+      <div class="card">
+        <h3>Neural Networks in Financial Market Predictions</h3>
+        <p>Deep learning models are improving stock market analysis by identifying complex patterns in trading data.</p>
+      </div>
+      <div class="card">
+        <h3>Cybersecurity in the Age of AI</h3>
+        <p>AI-driven security systems detect threats faster and improve real-time risk assessment, preventing cyberattacks before they happen.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const geminiApiKey = "AIzaSyDC58Z7RvyyBDrmuSucPYMzLdclinkMR8A";
+    const geminiApiEndpoint = "http://127.0.0.1:5000/research";
+
+    document.getElementById("search-btn").addEventListener("click", function() {
+      const query = document.getElementById("query-input").value.trim();
+      if (!query) {
+        alert("Please enter a research query.");
+        return;
+      }
+
+      document.getElementById("notification-text").innerText = "Searching for insights...";
+
+      fetch(geminiApiEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + geminiApiKey
+        },
+        body: JSON.stringify({ query })
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log("Fetched data:", data);
+        if (data.results && data.results.length > 0) {
+          const resultsPanel = document.getElementById("results-panel");
+          // Clear the panel only if new search results are available
+          resultsPanel.innerHTML = "";
+          data.results.forEach(result => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `<h3>${result.title}</h3><p>${result.summary}</p>`;
+            resultsPanel.appendChild(card);
+          });
+          document.getElementById("notification-text").innerText = "Results Updated!";
+        } else {
+          document.getElementById("notification-text").innerText = "No results found for your query.";
+        }
+      })
+      .catch(error => {
+        console.error("Error fetching data:", error);
+        document.getElementById("notification-text").innerText = "Error fetching data.";
+      });
+    });
+  </script>
+</body>
+</html>
